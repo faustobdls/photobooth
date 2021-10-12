@@ -5,6 +5,7 @@ import 'package:io_photobooth/assets.g.dart';
 import 'package:io_photobooth/footer/footer.dart';
 import 'package:io_photobooth/l10n/l10n.dart';
 import 'package:io_photobooth/photobooth/photobooth.dart';
+import 'package:io_photobooth/photobooth/widgets/animated_characters/animated_devfest.dart';
 import 'package:photobooth_ui/photobooth_ui.dart';
 
 const _initialCharacterScale = 0.25;
@@ -93,7 +94,7 @@ class PhotoboothPreview extends StatelessWidget {
         key: const Key('photoboothView_devfest_characterIconButton'),
         icon: const AssetImage('assets/icons/devfest_icon.png'),
         label: l10n.dinoButtonLabelText,
-        isSelected: state.isDinoSelected,
+        isSelected: state.isDevfestSelected,
         onPressed: () {
           trackEvent(
             category: 'button',
@@ -102,7 +103,13 @@ class PhotoboothPreview extends StatelessWidget {
           );
           context
               .read<PhotoboothBloc>()
-              .add(const PhotoCharacterToggled(character: Assets.devfest));
+              .add(const PhotoCharacterToggled(character: Asset(
+                  name: 'devfest',
+                  path: 'assets/images/devfest.png',
+                  size: Size(385, 147),
+              ),
+            ),
+          );
         },
       ),
     ];
@@ -186,6 +193,8 @@ AnimatedSprite? _getAnimatedSprite(String name) {
       return const AnimatedDino();
     case 'sparky':
       return const AnimatedSparky();
+    case 'devfest':
+      return const AnimatedDevfest();
     default:
       return null;
   }
