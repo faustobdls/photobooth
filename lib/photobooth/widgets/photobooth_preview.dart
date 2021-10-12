@@ -89,6 +89,22 @@ class PhotoboothPreview extends StatelessWidget {
               .add(const PhotoCharacterToggled(character: Assets.dino));
         },
       ),
+      CharacterIconButton(
+        key: const Key('photoboothView_devfest_characterIconButton'),
+        icon: const AssetImage('assets/icons/devfest_icon.png'),
+        label: l10n.dinoButtonLabelText,
+        isSelected: state.isDinoSelected,
+        onPressed: () {
+          trackEvent(
+            category: 'button',
+            action: 'click-add-friend',
+            label: 'add-devfest-friend',
+          );
+          context
+              .read<PhotoboothBloc>()
+              .add(const PhotoCharacterToggled(character: Assets.devfest));
+        },
+      ),
     ];
     return Stack(
       fit: StackFit.expand,

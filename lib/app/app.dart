@@ -43,7 +43,7 @@ class _App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Cabine de Fotos: Google I/O Extended Brasil',
+      title: 'Cabine de Fotos: Devfest Brasil 2021',
       theme: theme,
       localizationsDelegates: [
         AppLocalizations.delegate,

@@ -9,12 +9,63 @@ class PhotoboothBackground extends StatelessWidget {
     return Stack(
       fit: StackFit.expand,
       children: [
-        Image.asset(
-          'assets/backgrounds/photobooth_background.jpg',
-          repeat: ImageRepeat.repeat,
-          filterQuality: FilterQuality.high,
+         Container(
+          width: double.infinity,
+          height: double.infinity,
+          decoration:  const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.topRight,
+              colors: [
+                Color(0xff3487F1),
+                Color(0xff4D95F8),
+                Color(0xff4F96F9),
+                Color(0xff0658BE),
+              ],
+            ),
+          ),
         ),
         Positioned(
+          left: 40,
+          top: size.height * 0.2,
+          child: Image.asset(
+            'assets/backgrounds/block-1.png',
+            height: 150,
+          ),
+        ),
+        Positioned(
+          left: 10,
+          bottom: size.height * 0.1,
+          child: Image.asset(
+            'assets/backgrounds/block-3.png',
+            height: 150,
+          ),
+        ),
+        Positioned(
+          right: 40,
+          bottom: 80,
+          child: Image.asset(
+            'assets/backgrounds/block-2.png',
+            height: 300,
+          ),
+        ),
+        Positioned(
+          right: 40,
+          top: size.height * 0.1,
+          child: Image.asset(
+            'assets/backgrounds/block-5.png',
+            height: 300,
+          ),
+        ),
+        Positioned(
+          left: 40,
+          top: size.height * 0.45,
+          child: Image.asset(
+            'assets/backgrounds/block-4.png',
+            height: 300,
+          ),
+        ),
+        /*Positioned(
           left: 50,
           bottom: size.height * 0.2,
           child: Image.asset(
@@ -37,7 +88,7 @@ class PhotoboothBackground extends StatelessWidget {
             'assets/backgrounds/yellow_plus.png',
             height: 150,
           ),
-        ),
+        ),*/
       ],
     );
   }
