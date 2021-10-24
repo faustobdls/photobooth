@@ -103,6 +103,7 @@ class ShareBackground extends StatelessWidget {
               child: Image.asset(
                 'assets/backgrounds/block-2.png',
                 filterQuality: FilterQuality.high,
+                 height: 300,
               ),
             ),
           ),
@@ -116,6 +117,7 @@ class ShareBackground extends StatelessWidget {
               child: Image.asset(
                 'assets/backgrounds/block-5.png',
                 filterQuality: FilterQuality.high,
+                height: 300,
               ),
             ),
           ),
