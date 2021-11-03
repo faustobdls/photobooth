@@ -41,7 +41,9 @@
         }]
       }
     ],
-    "predeploy": []
+    "predeploy": [
+      "flutter build web --web-renderer html --dart-define SHARING_ENABLED=true"
+    ]
   },
   "functions": {
     "source": "functions",

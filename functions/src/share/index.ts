@@ -147,7 +147,7 @@ export async function getShareResponse(
 /**
  * Public sharing function
  */
-export const shareImage = functions.region('us-central1').https.onRequest(async (req, res) => {
+export const shareImage = functions.https.onRequest(async (req, res) => {
   const { status, send } = await getShareResponse(req);
   res.set('Access-Control-Allow-Origin', '*');
   res.status(status).send(send);
