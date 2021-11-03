@@ -43,6 +43,7 @@ class ShareStateListener extends StatelessWidget {
   }
 
   void _onShareSuccess(BuildContext context, ShareState state) {
+    if(state.shareUrl == ShareUrl.none) return;
     openLink(
       state.shareUrl == ShareUrl.twitter
           ? state.twitterShareUrl

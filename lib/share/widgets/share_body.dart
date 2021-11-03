@@ -9,8 +9,20 @@ import 'package:io_photobooth/photobooth/photobooth.dart';
 import 'package:io_photobooth/share/share.dart';
 import 'package:photobooth_ui/photobooth_ui.dart';
 
-class ShareBody extends StatelessWidget {
+class ShareBody extends StatefulWidget {
   const ShareBody({Key? key}) : super(key: key);
+
+  @override
+  State<ShareBody> createState() => _ShareBodyState();
+}
+
+class _ShareBodyState extends State<ShareBody> {
+  @override
+  void initState() {
+    super.initState();
+
+    context.read<ShareBloc>().add(const PreviewShare());
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -159,7 +171,9 @@ class GoToGoogleIOButton extends StatelessWidget {
     final l10n = context.l10n;
     final theme = Theme.of(context);
     return ElevatedButton(
-      style: ElevatedButton.styleFrom(primary: PhotoboothColors.white,padding: EdgeInsets.symmetric(horizontal: 10)),
+      style: ElevatedButton.styleFrom(
+          primary: PhotoboothColors.white,
+          padding: EdgeInsets.symmetric(horizontal: 10)),
       onPressed: launchGoogleIOExtendedLink,
       child: Text(
         l10n.goToGoogleIOButtonText,

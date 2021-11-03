@@ -68,9 +68,15 @@ class ShareBloc extends Bloc<ShareEvent, ShareState> {
     ShareState state,
   ) async* {
     if (!_isSharingEnabled) return;
+    if (!(event is ShareTapped)) return;
 
-    final shareUrl =
-        event is ShareOnTwitterTapped ? ShareUrl.twitter : ShareUrl.facebook;
+    final compare = {
+      PreviewShare: ShareUrl.none,
+      ShareOnTwitterTapped: ShareUrl.twitter,
+      ShareOnFacebookTapped: ShareUrl.facebook,
+    };
+
+    final shareUrl = compare[event] ?? ShareUrl.none;
 
     yield state.copyWith(
       uploadStatus: ShareStatus.initial,

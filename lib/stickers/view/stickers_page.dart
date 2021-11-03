@@ -365,7 +365,7 @@ class _NextConfirmationDialogContent extends StatelessWidget {
                   OutlinedButton(
                     style: OutlinedButton.styleFrom(
                       side: const BorderSide(color: PhotoboothColors.black),
-                      padding: EdgeInsets.symmetric(horizontal: 10)
+                      padding: const EdgeInsets.symmetric(horizontal: 10)
                     ),
                     onPressed: () => Navigator.of(context).pop(false),
                     child: Text(
