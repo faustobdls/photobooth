@@ -52,6 +52,7 @@ flutter:
     - assets/backgrounds/
     - assets/images/
     - assets/icons/
+    - assets/public/
     - assets/props/google/
     - assets/props/hats/
     - assets/props/eyewear/
