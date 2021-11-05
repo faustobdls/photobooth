@@ -54,6 +54,7 @@ flutter:
     - assets/icons/
     - assets/public/
     - assets/props/google/
+    - assets/props/patrocinadores/
     - assets/props/hats/
     - assets/props/eyewear/
     - assets/props/food/

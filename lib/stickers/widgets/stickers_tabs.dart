@@ -26,7 +26,7 @@ class _StickersTabsState extends State<StickersTabs>
   void initState() {
     super.initState();
     _tabController = TabController(
-      length: 5,
+      length: 6,
       vsync: this,
       initialIndex: widget.initialIndex,
     );
@@ -52,6 +52,10 @@ class _StickersTabsState extends State<StickersTabs>
           onTap: widget.onTabChanged,
           controller: _tabController,
           tabs: [
+            const StickersTab(
+              key: Key('stickersTabs_patrocinadores'),
+              assetPath: 'assets/icons/patrocinadores_icon.png',
+            ),
             const StickersTab(
               key: Key('stickersTabs_googleTab'),
               assetPath: 'assets/icons/google_icon.png',
@@ -79,6 +83,97 @@ class _StickersTabsState extends State<StickersTabs>
           child: TabBarView(
             controller: _tabController,
             children: [
+              StickersTabBarView(
+                key: const Key('stickersTabs_patrocinadoresView'),
+                stickers: {
+                  const Asset(
+                    name: '01_aliare_v1',
+                    path: 'assets/props/patrocinadores/aliare_1.png',
+                    size: Size(1000, 1000),
+                  ),
+                  const Asset(
+                    name: '02_aliare_v1',
+                    path: 'assets/props/patrocinadores/aliare_2.png',
+                    size: Size(1000, 1000),
+                  ),
+                  const Asset(
+                    name: '03_aliare_v1',
+                    path: 'assets/props/patrocinadores/aliare_3.png',
+                    size: Size(1000, 1000),
+                  ),
+                  const Asset(
+                    name: '01_picpay_v1',
+                    path: 'assets/props/patrocinadores/picpay_1.png',
+                    size: Size(1000, 1000),
+                  ),
+                  const Asset(
+                    name: '02_picpay_v1',
+                    path: 'assets/props/patrocinadores/picpay_2.png',
+                    size: Size(1868, 501),
+                  ),
+                  const Asset(
+                    name: '03_picpay_v1',
+                    path: 'assets/props/patrocinadores/picpay_3.png',
+                    size: Size(1000, 1000),
+                  ),
+                  const Asset(
+                    name: '01_tqi_v1',
+                    path: 'assets/props/patrocinadores/tqi_1.png',
+                    size: Size(1000, 1000),
+                  ),
+                  const Asset(
+                    name: '02_tqi_v1',
+                    path: 'assets/props/patrocinadores/tqi_2.png',
+                    size: Size(1868, 501),
+                  ),
+                  const Asset(
+                    name: '03_tqi_v1',
+                    path: 'assets/props/patrocinadores/picpay_3.png',
+                    size: Size(1000, 987),
+                  ),
+                  const Asset(
+                    name: '01_geek_hunter_v1',
+                    path: 'assets/props/patrocinadores/geek_hunter_1.png',
+                    size: Size(1000, 1000),
+                  ),
+                  const Asset(
+                    name: '02_geek_hunter_v1',
+                    path: 'assets/props/patrocinadores/geek_hunter_2.gif',
+                    size: Size(1000, 1000),
+                  ),
+                  const Asset(
+                    name: '01_ifood_v1',
+                    path: 'assets/props/patrocinadores/ifood_1.png',
+                    size: Size(1000, 1000),
+                  ),
+                  const Asset(
+                    name: '02_ifood_v1',
+                    path: 'assets/props/patrocinadores/ifood_2.png',
+                    size: Size(1000, 1000),
+                  ),
+                  const Asset(
+                    name: '01_zg_solucoes_v1',
+                    path: 'assets/props/patrocinadores/zg_solucoes_1.png',
+                    size: Size(1000, 1000),
+                  ),
+                  const Asset(
+                    name: '02_zg_solucoes_v1',
+                    path: 'assets/props/patrocinadores/zg_solucoes_2.png',
+                    size: Size(1000, 1000),
+                  ),
+                  const Asset(
+                    name: '01_accurate_v1',
+                    path: 'assets/props/patrocinadores/accurate_1.png',
+                    size: Size(1000, 1000),
+                  ),
+                  const Asset(
+                    name: '01_turing_v1',
+                    path: 'assets/props/patrocinadores/turing_1.png',
+                    size: Size(1000, 1000),
+                  ),
+                },
+                onStickerSelected: widget.onStickerSelected,
+              ),
               StickersTabBarView(
                 key: const Key('stickersTabs_googleTabBarView'),
                 stickers: Assets.googleProps,
