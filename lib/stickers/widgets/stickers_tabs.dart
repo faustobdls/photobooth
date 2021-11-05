@@ -171,6 +171,26 @@ class _StickersTabsState extends State<StickersTabs>
                     path: 'assets/props/patrocinadores/turing_1.png',
                     size: Size(1000, 1000),
                   ),
+                  const Asset(
+                    name: '01_globo_v1',
+                    path: 'assets/props/patrocinadores/globo_1.png',
+                    size: Size(540,318),
+                  ),
+                  const Asset(
+                    name: '02_globo_v1',
+                    path: 'assets/props/patrocinadores/globo_2.png',
+                    size: Size(540,319),
+                  ),
+                  const Asset(
+                    name: '03_globo_v1',
+                    path: 'assets/props/patrocinadores/globo_3.png',
+                    size: Size(540,319),
+                  ),
+                  const Asset(
+                    name: '01_pipefy_v1',
+                    path: 'assets/props/patrocinadores/pipefy_1.png',
+                    size: Size(600,204),
+                  ),
                 },
                 onStickerSelected: widget.onStickerSelected,
               ),
