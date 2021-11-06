@@ -87,6 +87,21 @@ class _StickersTabsState extends State<StickersTabs>
                 key: const Key('stickersTabs_patrocinadoresView'),
                 stickers: {
                   const Asset(
+                    name: '01_twillio_v1',
+                    path: 'assets/props/patrocinadores/twillio_1.png',
+                    size: Size(1000, 1000),
+                  ),
+                  const Asset(
+                    name: '02_twillio_v1',
+                    path: 'assets/props/patrocinadores/twillio_2.png',
+                    size: Size(1000, 1000),
+                  ),
+                  const Asset(
+                    name: '03_twillio_v1',
+                    path: 'assets/props/patrocinadores/twillio_3.png',
+                    size: Size(1000, 1000),
+                  ),
+                  const Asset(
                     name: '01_aliare_v1',
                     path: 'assets/props/patrocinadores/aliare_1.png',
                     size: Size(1000, 1000),
@@ -124,7 +139,7 @@ class _StickersTabsState extends State<StickersTabs>
                   const Asset(
                     name: '02_tqi_v1',
                     path: 'assets/props/patrocinadores/tqi_2.png',
-                    size: Size(1868, 501),
+                    size: Size(1000, 1000),
                   ),
                   const Asset(
                     name: '03_tqi_v1',
