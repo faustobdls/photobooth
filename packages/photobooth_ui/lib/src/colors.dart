@@ -37,4 +37,13 @@ abstract class PhotoboothColors {
 
   /// Charcoal
   static const Color charcoal = Color(0xBF202124);
+
+  /// TuftsBlue
+  static const Color tuftsBlue = Color(0xFF4B88E5);
+
+  /// PictonBlue
+  static const Color pictonBlue = Color(0xFF59B9EA);
+
+  /// Turquoise
+  static const Color turquoise = Color(0xFF42D9B7);
 }

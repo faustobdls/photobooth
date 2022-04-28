@@ -90,6 +90,8 @@ class PhotoboothState extends Equatable {
 
   bool get isDevfestSelected => characters.containsAsset(named: 'devfest');
 
+  bool get isIWDSelected => characters.containsAsset(named: 'iwd');
+
   bool get isGDGSelected => characters.containsAsset(named: 'gdg');
 
   bool get isAnyCharacterSelected => characters.isNotEmpty;

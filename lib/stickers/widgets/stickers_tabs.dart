@@ -26,7 +26,7 @@ class _StickersTabsState extends State<StickersTabs>
   void initState() {
     super.initState();
     _tabController = TabController(
-      length: 6,
+      length: 5,
       vsync: this,
       initialIndex: widget.initialIndex,
     );
@@ -52,10 +52,10 @@ class _StickersTabsState extends State<StickersTabs>
           onTap: widget.onTabChanged,
           controller: _tabController,
           tabs: [
-            const StickersTab(
+           /*const StickersTab(
               key: Key('stickersTabs_patrocinadores'),
               assetPath: 'assets/icons/patrocinadores_icon.png',
-            ),
+            ),*/
             const StickersTab(
               key: Key('stickersTabs_googleTab'),
               assetPath: 'assets/icons/google_icon.png',
@@ -83,7 +83,7 @@ class _StickersTabsState extends State<StickersTabs>
           child: TabBarView(
             controller: _tabController,
             children: [
-              StickersTabBarView(
+              /*StickersTabBarView(
                 key: const Key('stickersTabs_patrocinadoresView'),
                 stickers: {
                   const Asset(
@@ -208,7 +208,7 @@ class _StickersTabsState extends State<StickersTabs>
                   ),
                 },
                 onStickerSelected: widget.onStickerSelected,
-              ),
+              ),*/
               StickersTabBarView(
                 key: const Key('stickersTabs_googleTabBarView'),
                 stickers: Assets.googleProps,

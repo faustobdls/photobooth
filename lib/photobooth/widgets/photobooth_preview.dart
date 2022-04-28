@@ -5,8 +5,8 @@ import 'package:io_photobooth/assets.g.dart';
 import 'package:io_photobooth/footer/footer.dart';
 import 'package:io_photobooth/l10n/l10n.dart';
 import 'package:io_photobooth/photobooth/photobooth.dart';
-import 'package:io_photobooth/photobooth/widgets/animated_characters/animated_devfest.dart';
 import 'package:io_photobooth/photobooth/widgets/animated_characters/animated_gdg.dart';
+import 'package:io_photobooth/photobooth/widgets/animated_characters/animated_iwd.dart';
 import 'package:photobooth_ui/photobooth_ui.dart';
 
 const _initialCharacterScale = 0.25;
@@ -92,21 +92,21 @@ class PhotoboothPreview extends StatelessWidget {
         },
       ),
       CharacterIconButton(
-        key: const Key('photoboothView_devfest_characterIconButton'),
-        icon: const AssetImage('assets/icons/devfest_icon.png'),
+        key: const Key('photoboothView_iwd_characterIconButton'),
+        icon: const AssetImage('assets/icons/iwd_icon.png'),
         label: l10n.dinoButtonLabelText,
-        isSelected: state.isDevfestSelected,
+        isSelected: state.isIWDSelected,
         onPressed: () {
           trackEvent(
             category: 'button',
             action: 'click-add-friend',
-            label: 'add-devfest-friend',
+            label: 'add-iwd-friend',
           );
           context
               .read<PhotoboothBloc>()
               .add(const PhotoCharacterToggled(character: Asset(
-                  name: 'devfest',
-                  path: 'assets/images/devfest.png',
+                  name: 'iwd',
+                  path: 'assets/images/iwd.png',
                   size: Size(512, 195),
               ),
             ),
@@ -135,7 +135,6 @@ class PhotoboothPreview extends StatelessWidget {
           );
         },
       ),
-      
     ];
     return Stack(
       fit: StackFit.expand,
@@ -217,8 +216,8 @@ AnimatedSprite? _getAnimatedSprite(String name) {
       return const AnimatedDino();
     case 'sparky':
       return const AnimatedSparky();
-    case 'devfest':
-      return const AnimatedDevfest();
+    case 'iwd':
+      return const AnimatedIWD();
     case 'gdg':
       return const AnimatedGDG();
     default:

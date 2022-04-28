@@ -173,8 +173,8 @@ class GoToGoogleIOButton extends StatelessWidget {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
           primary: PhotoboothColors.white,
-          padding: EdgeInsets.symmetric(horizontal: 10)),
-      onPressed: launchGoogleIOExtendedLink,
+          padding: const EdgeInsets.symmetric(horizontal: 10)),
+      onPressed: launchMainWebSiteLink,
       child: Text(
         l10n.goToGoogleIOButtonText,
         style: theme.textTheme.button?.copyWith(color: PhotoboothColors.black),

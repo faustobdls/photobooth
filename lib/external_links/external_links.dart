@@ -5,9 +5,9 @@ const flutterDevExternalLink = 'https://flutter.dev';
 const firebaseExternalLink = 'https://firebase.google.com';
 const photoboothEmail = 'mailto:flutter-photo-booth@google.com';
 const openSourceLink = 'https://github.com/flutter/photobooth';
-const googleIOExtendLink = 'http://devfest.com.br/';
+const mainWebSiteLink = 'https://iwdbrasil2022.web.app/';
 
-Future<void> launchGoogleIOExtendedLink() => openLink(googleIOExtendLink);
+Future<void> launchMainWebSiteLink() => openLink(mainWebSiteLink);
 Future<void> launchGoogleIOLink() => openLink(googleIOExternalLink);
 Future<void> launchFlutterDevLink() => openLink(flutterDevExternalLink);
 Future<void> launchFirebaseLink() => openLink(firebaseExternalLink);

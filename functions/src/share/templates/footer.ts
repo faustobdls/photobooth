@@ -8,7 +8,7 @@ export default `
   </div>
   <div class="right">
     <ul>
-      <li><a href="https://devfest.com.br/">Google I/O Extended Brasil 2021</a></li>
+      <li><a href="https://iwdbrasil2022.web.app/">IWD 2022</a></li>
       <li><a href="https://flutter.dev/docs/codelabs">Codelab</a></li>
       <li><a href="https://medium.com/flutter/how-its-made-i-o-photo-booth-3b8355d35883">How It's Made</a></li>
       <li><a href="https://policies.google.com/terms">Terms of Service</a></li>

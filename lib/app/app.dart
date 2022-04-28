@@ -43,7 +43,7 @@ class _App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Cabine de Fotos: Devfest Brasil 2021',
+      title: 'Cabine de Fotos: IWD Brasil 2022',
       theme: theme,
       localizationsDelegates: [
         AppLocalizations.delegate,

@@ -11,6 +11,8 @@ class LandingBody extends StatelessWidget {
     final theme = Theme.of(context);
     final l10n = context.l10n;
     final size = MediaQuery.of(context).size;
+    final textColor = PhotoboothColors.white;
+
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24),
       child: Column(
@@ -19,14 +21,14 @@ class LandingBody extends StatelessWidget {
           SelectableText(
             l10n.landingPageHeading,
             key: const Key('landingPage_heading_text'),
-            style: theme.textTheme.headline1,
+            style: theme.textTheme.headline1?.copyWith(color: textColor),
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 40),
           SelectableText(
             l10n.landingPageSubheading,
             key: const Key('landingPage_subheading_text'),
-            style: theme.textTheme.headline3,
+            style: theme.textTheme.headline3?.copyWith(color: textColor),
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 24),

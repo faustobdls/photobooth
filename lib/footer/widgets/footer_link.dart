@@ -76,7 +76,7 @@ class FooterGoogleIOLink extends StatelessWidget {
     final l10n = context.l10n;
 
     return FooterLink(
-      link: googleIOExtendLink,
+      link: mainWebSiteLink,
       text: l10n.footerGoogleIOLinkText,
     );
   }
