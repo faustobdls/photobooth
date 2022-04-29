@@ -74,7 +74,7 @@ class AnimatedPhotoboothPhotoLandscape extends StatelessWidget {
   static const sprite = AnimatedSprite(
     mode: AnimationMode.oneTime,
     sprites: Sprites(
-      asset: 'photo_frame_spritesheet_landscape.jpg',
+      asset: 'photo_frame_spritesheet_landscape.png',
       size: Size(1308, 1038),
       frames: 19,
       stepTime: 2 / 19,
