@@ -7,6 +7,7 @@ import 'package:io_photobooth/l10n/l10n.dart';
 import 'package:io_photobooth/photobooth/photobooth.dart';
 import 'package:io_photobooth/photobooth/widgets/animated_characters/animated_gdg.dart';
 import 'package:io_photobooth/photobooth/widgets/animated_characters/animated_iwd.dart';
+import 'package:io_photobooth/photobooth/widgets/animated_characters/animated_wtm_logo.dart';
 import 'package:photobooth_ui/photobooth_ui.dart';
 
 const _initialCharacterScale = 0.25;
@@ -114,6 +115,28 @@ class PhotoboothPreview extends StatelessWidget {
         },
       ),
       CharacterIconButton(
+        key: const Key('photoboothView_wtm_logo_characterIconButton'),
+        icon: const AssetImage('assets/icons/wtm_logo_icon.png'),
+        label: 'WTM Logo',
+        isSelected: state.isWTMLogoSelected,
+        onPressed: () {
+          trackEvent(
+            category: 'button',
+            action: 'click-add-friend',
+            label: 'add-wtm-logo-friend',
+          );
+          context
+              .read<PhotoboothBloc>()
+              .add(const PhotoCharacterToggled(character: Asset(
+                  name: 'wtm',
+                  path: 'assets/images/wtm.png',
+                  size: Size(512, 512),
+              ),
+            ),
+          );
+        },
+      ),
+      /*CharacterIconButton(
         key: const Key('photoboothView_gdg_characterIconButton'),
         icon: const AssetImage('assets/icons/gdg_icon.png'),
         label: l10n.dinoButtonLabelText,
@@ -134,7 +157,7 @@ class PhotoboothPreview extends StatelessWidget {
             ),
           );
         },
-      ),
+      ),*/
     ];
     return Stack(
       fit: StackFit.expand,
@@ -218,6 +241,8 @@ AnimatedSprite? _getAnimatedSprite(String name) {
       return const AnimatedSparky();
     case 'iwd':
       return const AnimatedIWD();
+     case 'wtm':
+      return const AnimatedWTMLogo();
     case 'gdg':
       return const AnimatedGDG();
     default:
